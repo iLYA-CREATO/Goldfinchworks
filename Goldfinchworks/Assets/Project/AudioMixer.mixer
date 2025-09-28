@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!243 &-3029224018897878271
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DistanceDanger
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 99c6253207444614f9038136aff1e8d6
+  m_Children: []
+  m_Volume: 0320a2984563403488428ea6fc0fc26e
+  m_Pitch: e14b174a4736cf14b9e9125d51a36408
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -2421303741309977734}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &-2421303741309977734
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 61a93076a54728a46ad4eabac91a7c4c
+  m_EffectName: Attenuation
+  m_MixLevel: 86e20b2a51098b74fb6a43c854151c4a
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-2301194801492375883
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -55,6 +88,7 @@ AudioMixerController:
     - 5ffd8ba1b13513145a279bcd76aecb56
     - 09eae4a7da234394f87854631c7456b3
     - 493e4507774d6e240a0ebf5f9e055967
+    - 99c6253207444614f9038136aff1e8d6
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -71,6 +105,7 @@ AudioMixerGroupController:
   - {fileID: -2301194801492375883}
   - {fileID: 6880021172999673287}
   - {fileID: 2645860622398002651}
+  - {fileID: -3029224018897878271}
   m_Volume: 7768fcda02b075c478fc06df1efcab8c
   m_Pitch: 18ee0ea2eecc82740afc4203867ef991
   m_Send: 00000000000000000000000000000000
@@ -104,6 +139,11 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 4c4b8e6c7562115419634d67fed4c6c0
   m_FloatValues:
+    022e6b433a472374c86fbb18e3b8a84c: -24.300053
+    1ae20de4698088243909b4d1312c9f52: 7
+    8163b876e2eb3544291a920f6c86447e: 21.5
+    7be0cd882cea90e4ea923cd33458620d: 2
+    0320a2984563403488428ea6fc0fc26e: -0.02577656
     7768fcda02b075c478fc06df1efcab8c: 0.8772599
   m_TransitionOverrides: {}
 --- !u!244 &60747385720985918

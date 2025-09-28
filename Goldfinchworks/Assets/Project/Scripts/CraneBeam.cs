@@ -8,6 +8,8 @@ public class CraneBeam : MonoBehaviour
     [SerializeField] private Transform craneHolder;
     [SerializeField] private Transform hook;
 
+    [SerializeField] private Transform coil;
+
     [Header("Текущее состояние")]
     [SerializeField] private bool isCraneHookMoving = false;
     [SerializeField] private bool isCraneHolderMoving = false;
@@ -27,6 +29,7 @@ public class CraneBeam : MonoBehaviour
     [SerializeField] private float craneHookSpeed = 3f;
     [SerializeField] private float craneHolderSpeed = 3f;
     [SerializeField] private float hookSpeed = 2f;
+    [SerializeField] private float coilSpeed = 2f;
 
     private Vector3 craneHookVelocity = Vector3.zero;
     private Vector3 craneHolderVelocity = Vector3.zero;
@@ -202,8 +205,20 @@ public class CraneBeam : MonoBehaviour
     {
         Debug.Log("Двигаем крюк");
         Vector3 newPosition = hook.localPosition + hookVelocity * Time.deltaTime;
-        newPosition.y = Mathf.Clamp(newPosition.y, minHook, maxHook);
+        newPosition.y = Mathf.Clamp(newPosition.y, minHook + (-0.2f), maxHook + 0.2f);
+
         hook.localPosition = newPosition;
+
+        Debug.Log(hookVelocity);
+        if (hook.localPosition.y > minHook && hookVelocity.y < 0)
+        {
+            coil.rotation *= Quaternion.Euler(-coilSpeed * Time.deltaTime, 0, 0);
+        }
+        
+        if(hook.localPosition.y < maxHook && hookVelocity.y > 0)
+        {
+            coil.rotation *= Quaternion.Euler(coilSpeed * Time.deltaTime, 0, 0);
+        }
     }
 
     private void StopCraneMovement()

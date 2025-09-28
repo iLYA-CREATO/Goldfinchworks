@@ -37,7 +37,6 @@ public class MoveCamera : MonoBehaviour
        
         playerBody.Rotate(Vector3.up * _mouseX);
     }
-
     public void LockController(bool isLock)
     {
         lockController = isLock;

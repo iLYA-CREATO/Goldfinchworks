@@ -75,9 +75,6 @@ public class CraneBeamInput : MonoBehaviour
         {
             OnCraneHolder?.Invoke(0);
         }
-
-
-
         #endregion
     }
 }
